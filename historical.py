@@ -15,8 +15,8 @@ from utils import utils, data
 class DataContainer:
     def __init__(self, symbol, provider, sandbox=False, verbose=False):
         DATA_PATHS = {
-            'yahoo':        '/scripts/yahoo/yahoo-historical',
-            'iex':          '/scripts/iex-historical'
+            'yahoo':        str(utils.file_path(__file__)) + '/../yahoo/yahoo-historical',
+            'iex':          str(utils.file_path(__file__)) + '/../iex/iex-historical'
         }
         if provider == 'iex':
             DATA_PATHS[provider] += f"/{'sandbox' if sandbox else 'cloud'}"
