@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter
 from matplotlib.ticker import StrMethodFormatter
 
-from utils import utils, data
+from fundalytica_utils import utils, data
 
 class DataContainer:
     def __init__(self, symbol, provider, sandbox=False, verbose=False):
